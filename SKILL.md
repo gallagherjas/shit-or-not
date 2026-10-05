@@ -1,6 +1,6 @@
 ---
 name: shit-or-not
-description: "Assess a project or module for spaghetti code and structural maintenance problems at the system, feature, and implementation levels. Support findings with evidence, affected scope, and prioritized recommendations. Use for code quality, technical debt, architectural decay, or the effort required to understand and change code; not for routine feature work, isolated bug fixes, or formatting."
+description: "Assess code maintainability at the system, feature, and implementation levels. Use for technical debt, architectural decay, or difficult-to-change code. Provide evidence and prioritized recommendations; exclude routine feature work, isolated bug fixes, and formatting."
 ---
 
 # Shit or Not
@@ -40,6 +40,6 @@ Load references as each review stage requires them. Use feature and implementati
 
 For each finding, provide code locations, observed facts, maintenance consequences, affected scope, and a recommendation. If implementations disagree, show each relevant implementation. If an issue crosses modules, show the call or data relationships. Distinguish observed problems from risks under a hypothetical change.
 
-Inspect relevant commits when history would help resolve a question. Also check adherence to the project's commit conventions.
+Inspect relevant commits when history would help resolve a question.
 
-After verifying the main flows and key concerns, continue into unread files if material evidence gaps remain. Do not finalize a verdict while those questions are still unresolved. If no substantive problems are found, state the reviewed scope; do not claim the entire codebase is healthy or keep scanning just to fill a findings quota.
+Follow material evidence gaps into relevant unread files. Stop once the main flows and key concerns are supported within the requested scope. If key evidence is inaccessible, state the gap and limit the verdict or report insufficient evidence. If no substantive problems are found, state the reviewed scope; do not claim the entire codebase is healthy or keep scanning just to fill a findings quota.
