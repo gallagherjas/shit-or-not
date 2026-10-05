@@ -15,7 +15,8 @@ Review function readability at the implementation level and rule execution at th
 | Data and state ownership | Who can change critical state? How are multiple copies kept consistent? | Locate definitions and writes. Check synchronization protocols, invalidation mechanisms, and the source of truth. |
 | Shared infrastructure | Do shared modules tie unrelated business areas together? | Inspect consumers, business-specific branches, and global state. Identify who is affected by a local change. |
 | Change propagation | Does a reasonable change require extensive coordination across boundaries? | Choose a change scenario grounded in actual functionality. List the places that must change together and why. Use history, when available, to verify which files actually changed together. |
-| Builds and configuration | Does behavior depend on obscure environment or version assumptions? | Compare build entry points, dependency declarations, configuration, and documentation. Identify implicit requirements and their effects. Do not claim the project cannot build without trying the build. |
+| Builds and configuration | Are environment assumptions clear and builds reproducible? | Compare build entry points, dependency declarations, configuration, and documentation. Check how direct and transitive versions are fixed in development and CI through lockfiles, pins, or equivalent mechanisms. Identify implicit requirements and their effects. Do not claim the project cannot build without trying the build. |
+| Project documentation | Can developers find the setup steps, environment requirements, and key constraints? | Compare available guidance with actual entry points and configuration. Identify knowledge developers must rediscover; equivalent guidance can replace a README. |
 
 Keep the dependency map focused on the modules and relationships needed to explain behavior.
 
