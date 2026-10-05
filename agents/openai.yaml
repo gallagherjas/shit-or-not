@@ -1,0 +1,3 @@
+interface:
+  display_name: "shit or not"
+  short_description: "Assess maintainability and spaghetti code with evidence"
