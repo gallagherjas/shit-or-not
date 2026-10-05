@@ -1,4 +1,4 @@
-# Shit or Not
+# 💩 Shit or Not
 
 English | [简体中文](README.zh-CN.md)
 
